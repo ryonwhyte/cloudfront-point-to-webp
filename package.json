@@ -1,6 +1,6 @@
 {
   "name": "cloudfront-point-to-webp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "useragent": "^2.3.0"
+    "ua-parser-js": "^1.0.38"
   }
 }
