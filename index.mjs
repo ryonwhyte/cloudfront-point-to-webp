@@ -10,7 +10,8 @@ export const handler = async (event, context, callback) => {
   const parser = new UAParser();
   const agent = parser.setUA(userAgentString).getResult();
 
-  console.log("New Agent is: ", agent);
+  //Debugger
+  //console.log("New Agent is: ", agent);
 
   const browsersToInclude = [
     { browser: 'Chrome', version: 23 },
@@ -40,7 +41,8 @@ export const handler = async (event, context, callback) => {
     }];
 
     const olduri = request.uri;
-    const newuri = olduri.replace(/(\.jpg|\.png|\.jpeg)$/g, '.webp');
+    //gif and raw may not be necessary
+    const newuri = olduri.replace(/(\.jpg|\.png|\.jpeg||\.gif|\.raw)$/g, '.webp');
     request.uri = newuri.replace('/original/', '/optimized/');
   }
 
