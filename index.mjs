@@ -42,7 +42,7 @@ export const handler = async (event, context, callback) => {
 
     const olduri = request.uri;
     //gif and raw may not be necessary
-    const newuri = olduri.replace(/(\.jpg|\.png|\.jpeg||\.gif|\.raw)$/g, '.webp');
+    const newuri = olduri.replace(/(\.jpg|\.png|\.jpeg|\.gif|\.raw)$/g, '.webp');
     request.uri = newuri.replace('/original/', '/optimized/');
   }
 
